@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Household Data</title>
+</head>
+<body>
+    <h1>Household Data Pull</h1>
+    <form method="POST">
+        <label for="hshd_num">Household Number:</label>
+        <input type="text" id="hshd_num" name="hshd_num" required>
+        <button type="submit">Search</button>
+    </form>
+    {% if data %}
+    <h2>Results</h2>
+    <p><strong>Household Number:</strong> {{ data.Hshd_num }}</p>
+    <p><strong>Basket Number:</strong> {{ data.Basket_num }}</p>
+    <p><strong>Date:</strong> {{ data.Date }}</p>
+    <p><strong>Product Number:</strong> {{ data.Product_num }}</p>
+    <p><strong>Department:</strong> {{ data.Department }}</p>
+    <p><strong>Commodity:</strong> {{ data.Commodity }}</p>
+    {% endif %}
+</body>
+</html>
